@@ -1,0 +1,19 @@
+Chains of actions and consistency checks on warehouse and their operations
+
+in_warehouse
+# When an item is being used, for example, a lawnmower is now in use for
+# a longer period than just a blink of an eye.
+
+# An object is temporarily moved to someone else's possession
+stored_at_custody
+eol_recycled
+waiting_for_recycling -> eol_recycled
+consumed_on_spot
+destroyed_not_specified
+missing_not_assumed_theft
+theft
+theft_recovered -> in_use
+sold
+given_for_free
+
+
