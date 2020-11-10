@@ -1,0 +1,24 @@
+
+basics of Webassembly (wasm)
+basics of CSS
+interfacing CSS and HTML5
+writing APIs using Node and JS
+
+tokens of Javascript
+JavaScript AST analysis
+using 'david' to update JS deps
+
+perf analysis and tricks in JavaScript
+the boolean oddities of JavaScript
+what Emscripten is
+
+using Emscripten to produce faster JavaScript programs
+setting up Continuous Integration using Jenkins
+quality monitoring
+test code writing for Angular 2
+test code writing for Angular 4
+test code writing for Angular 8
+test code writing for cutting edge, awesome Angular 16
+
+Jasmine and Karma
+

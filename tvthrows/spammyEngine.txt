@@ -1,0 +1,43 @@
+load and initialize the spam engine for game
+export as neat JS interface
+first: the game spam engine
+second: the service module (API) for adding new parts
+
+var phraseBegin = 
+ ["Hei Juha, ",
+  "hei juhha! "
+  "Hei juha,,"
+  "Hei juhaa!];
+
+var spammySubjects = 
+ ["Create, Grow, Relax.",
+  "What it Actually Costs to IPO?",
+  "What Is The Best Strategy To "
+ ];
+
+"do it!", 
+"What's the right Why you should ask!",
+What are you for the world?
+Have a deep connection with your customers
+Don't be afraid of being there to help them. 
+Love your customers <3
+Let the love show. 
+Get appraisal and fame in a positive way. 
+
+
+
+/*
+- generic rule engine for word concat on all languages
+  1. end a phrase in certain chars
+  2. in between words, apply a ' ' space
+  3. no other rules! It's spam, remember, partly generated
+     by low level code..
+
+- rule engine to concatenate parts of phrase in Finnish
+  - capitalization of letters
+  - names using capital letter, vs ordinary nouns 
+*/
+
+var saltersFI = [ 
+ "Paremmat",
+ "Enemmän"]; 

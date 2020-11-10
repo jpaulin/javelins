@@ -1,0 +1,91 @@
+[Backlog for TV game 1]
+
+ ✔ done: globalEnv for ARPA net (internet) @done (20-11-05 08:49)
+ ☐ finish the time formula - in fn "estimatereadimillis"
+ ☐ handle error state in getNet (dribble from "estimatereadimillis")
+
+
+Day T+2:
+ ☐ code - make the background hook for router downloads - use millis, and
+   signal the ready (JavaScript or C++ threads / IPC)
+
+Day T+3:
+ ☐ make netwk Objects in-game have a blinking light, set on "while downloading"
+ ☐ milieu: [env] make smooth gaussian model for global ARPA alpha
+ ☐ milieu: [env] add spikings to ARPA load indicating crises and major downloads
+
+ ☐ [obus] allow p1 to choose their phone brand 
+ ☐ [obus] code the security patch requirements, based on which phone brand p1 has
+ ☐ add prices of smartphones
+ ☐ add jailbreaking possibility to some type of phones
+ ☐ add the practical ramifications of insecurity when jailbreaking a phone
+
+Day T+4:
+ ☐ add [obus] office Wifi box
+ ☐ make Object "laptop"
+ ☐ animate 1 hinge for laptop
+ ☐ state changes for laptop: openLid, closeLid
+ ☐ dropped -> damages the laptop
+ ☐ frictionOnSurface: depends based on model
+ ☐ add prices to laptops
+
+THESE BELOW ONCE THE 3D ENGINE IS WORKING:
+
+Major feature -- elevators:
+ ☐ make inside view of elevator cabin: 4f + 2f (walls, roof, bottom) 
+ ☐ make the ctrl panel 3D (buttons) for operating the elevator
+ ☐ make elevator sliding doors: 2 slabs (cube)
+ ☐ make animation of slabs, linear tweening between <relStart>, <relEnd>
+  ☐ add consraint: elevator doors Z always same as elevator's
+ ☐ control panel has 1 call button, outside elevator
+ ☐ inside elevator, there are as many buttons as floors
+ ☐ pressing a button takes the elevator to that floor
+ ☐ pressing current floor button, 500ms lit, then unlit 
+ ☐ pressing other than current floor btn, lit ON, GO, and unlit the btn
+
+
+
+
+Level creation - Upholding the environment: 
+ ✔ add more hosts to internetHosts, as you need them @done (20-11-05 10:24)
+
+
+## Principles of IT gear, electronics, and realism in the Teknovelho game
+
+Games are supposed to fun. The definition however, begs 
+for more analysis. 
+
+TV's devices have a somewhat crude resemblance to 
+the real world devices.
+
+Let's take an example;
+a "router" or "modem", in game, has a green blinking LED that
+indicates network activity. Breaking real-world, the LED in fact
+shows when a download is "ready". The LED has 2 colors and 
+3 states.. 
+1) A blinking (alternate black and green) LED light indicates 
+   download in progress
+2) SOLID GREEN led shows that the last download command is now ready
+   (data downloaded).
+3) A red light shows network level major error. 
+   (inside the game code, this is the globalEnv flag 
+    currentARPA_Alpha" == undefined ).
+4) a Fourth dimension is brought when the "blinking RED"
+   state is introduced, which shows that user typed a wrong command,
+   or the syntax is incorrect.
+
+General game mechanics:
+
+Add watch command : you can keep an eye on indicator, such as LED
+look at command   : gets you specific details of an object, also writings on it
+
+
+if you get out of an area, you no longer 'watch' the object
+ - radii check, basically a Line-Of-Sight maintenance question
+
+
+
+Resources:
+
+1. MUDs and Virtual Environments (Idahoo)
+   http://www2.cs.uidaho.edu/~jeffery/courses/428/lecture.html
