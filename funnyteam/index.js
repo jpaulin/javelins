@@ -47,6 +47,12 @@ const getRandomNumber = (min, max) => {
 }
 
 
+/*
+ * Moves a backend developer's backlog such that task "whichTask"
+ * becomes the top of queue, ie. the last item in the backLog
+ * array. This results that the backend dev starts working on that 
+ * item next time he is in work cycle.
+ */
 function moveBackLogToFrontofQueue(whichTask) {
 	var rewritten = []
 	var curLen = backend.myBackLog.length
