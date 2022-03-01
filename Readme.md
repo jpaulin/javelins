@@ -1,12 +1,31 @@
 # javelins
 
-A simple 'blog' if you will. 
+A simple 'blog' if you will. Access the blog by pointing your browser to
 
-Runs when you have NodeJS installed. 
+http://localhost:3000/
 
-This server will create a listener on port 3000 (you can choose the port)
+javelins requires you to install 'express' library to the
+working folder.
 
-## Changing port
+SO, all requirements for running:
+* NodeJS
+* 'express' (you can install by `npm install`)
+
+## NPM and the libraries... what?!
+
+Node is the JavaScript runtime, "npm" is its package manager, and
+'express' is one of the most useful packages of code. express
+is used by javelins.
+
+So javelins uses code in express. Javelins is being run by using
+NodeJS as runtime platform.
+
+## Which port does javelins listen to?
+
+This server will create a listener on port 3000 (you can choose the port,
+in code).
+
+## Changing the port (from default 3000)
 
 You can change the variable:
 ```
@@ -24,4 +43,5 @@ to see content.
 node ./index.js
 
 Soon a text should appear on your console:
-'Running!'
+'Javelins server listening at http://localhost:3000'
+(or similar)
