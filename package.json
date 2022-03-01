@@ -1,0 +1,26 @@
+{
+  "name": "javelins",
+  "version": "1.0.0",
+  "description": "Web server based on express JS and originally 7 lines long",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jukka Paulin <jukka.paulin@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpaulin/javelins.git"
+  },
+  "keywords": [
+    "web",
+    "blog",
+    "server",
+    "javascript",
+    "express"
+  ],
+  "bugs": {
+    "url": "https://github.com/jpaulin/javelins/issues"
+  },
+  "homepage": "https://github.com/jpaulin/javelins#readme"
+}
