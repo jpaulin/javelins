@@ -18,12 +18,23 @@ function getCompletePostHtml (blogPostId) {
 
 // This is our blog's posts, so far. They could be complex, but this is a simple example.
 // If you had more, just make them strings like this. Strings can be long in JavaScript!
+/* Muted during module trial 
 const posts = [
   'First post contains this line!',
   'Second post',
   'Third post!',
   'Greetings is the fourth post!',
   'Fifth post!']
+*/
+
+// Instead we are importing data from the data.js datamodule
+
+var data = require('./data.js')
+
+const posts = data
+
+// For debugging purposes we print the object to console 
+// console.log(JSON.stringify(posts))
 
 app.get('/', (req, res) => {
   res.send('SIXLINE BLOG. I am all good!')
@@ -39,9 +50,10 @@ app.get('/post/', (req, res) => {
   // Array out of bounds test, for not crashing our server
   console.log(`Demanded post: ${postId} and my blog has ${posts.length} posts. `)
   if (postId <= posts.length) {
+    postId -= 1 //indeksitarkistus
     res.send(getCompletePostHtml(postId))
   } else {
-    res.send("No such post!")
+    res.send(`Post ${postId} not available`)
   }
 })
 
