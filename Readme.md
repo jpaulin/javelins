@@ -11,7 +11,7 @@ SO, all requirements for running:
 * NodeJS
 * 'express' (you can install by `npm install`)
 
-## NPM and the libraries... what?!
+## NPM and the libraries
 
 Node is the JavaScript runtime, "npm" is its package manager, and
 'express' is one of the most useful packages of code. express
