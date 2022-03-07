@@ -84,7 +84,8 @@ app.get('/post/', (req, res) => {
   }
   // Array out of bounds test, for not crashing our server
   console.log(`Demanded post: ${postId} and my blog has ${posts.length} posts. `)
-  if (postId <= posts.length) {
+  if (postId <= posts.length) 
+    postId -= 1
     res.send(getCompletePostHtml(postId))
   } else {
     res.send('No such post!')
