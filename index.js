@@ -22,8 +22,7 @@ var data = require('./data.js')
 
 const posts = data
 
-// For debugging purposes we print the object to console  *** to be removed ***
-// console.log(JSON.stringify(posts))
+
 
 app.get('/', (req, res) => {
   res.send('SIXLINE BLOG. I am all good!')
