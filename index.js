@@ -7,6 +7,7 @@ const express = require('express') // let's import
 const app = express()
 const port = 3000
 
+
 function getCompletePostHtml (blogPostId, hitCount) {
   let cur = ''
   cur = '<HTML><BODY>'
@@ -32,6 +33,7 @@ app.get('/', (req, res) => {
 })
 
 // First and only route. We respond at http://server/post/?id=1
+var hitCounter = 0
 app.get('/post/', (req, res) => {
   let postId = parseInt(req.query.id)
   if (typeof postId !== 'number') {
@@ -39,8 +41,7 @@ app.get('/post/', (req, res) => {
     return
   }
   // Array out of bounds test, for not crashing our server
-  console.log(`Demanded post: ${postId} and my blog has ${posts.length} posts. `)
-  let hitCounter = 0
+  console.log(`Demanded post: ${postId} and my blog has ${posts.length} posts. and hitcount is ${hitCounter} `)
   if (postId <= posts.length) {
     postId -= 1 //indeksitarkistus
     hitCounter += 1
