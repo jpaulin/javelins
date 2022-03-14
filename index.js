@@ -7,12 +7,15 @@ const express = require('express') // let's import
 const app = express()
 const port = 3000
 
-function getCompletePostHtml (blogPostId) {
+function getCompletePostHtml (blogPostId, hitCount) {
   let cur = ''
   cur = '<HTML><BODY>'
   let postText = posts[blogPostId]
+  let hitText = posts[hitCount]
   cur += postText
+  cur += hitCount
   cur += '</BODY></HTML>'
+  
   return cur
 }
 
@@ -40,8 +43,8 @@ app.get('/post/', (req, res) => {
   let hitCounter = 0
   if (postId <= posts.length) {
     postId -= 1 //indeksitarkistus
-    res.send(getCompletePostHtml(postId))
     hitCounter += 1
+    res.send(getCompletePostHtml(postId, hitCounter))
   } else {
     res.send(`Post ${postId} not available`)
   }
