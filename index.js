@@ -37,9 +37,11 @@ app.get('/post/', (req, res) => {
   }
   // Array out of bounds test, for not crashing our server
   console.log(`Demanded post: ${postId} and my blog has ${posts.length} posts. `)
+  let hitCounter = 0
   if (postId <= posts.length) {
     postId -= 1 //indeksitarkistus
     res.send(getCompletePostHtml(postId))
+    hitCounter += 1
   } else {
     res.send(`Post ${postId} not available`)
   }
